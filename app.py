@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, session, redirect
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 import json
 import os
 from flask_mail import Mail
 from datetime import datetime
 import math
 
-with open('config.json', 'r') as c:
+with open('C:\\Users\\Vraj Desai\\Desktop\\Projects\\config.json', 'r') as c:
     params = json.load(c)["params"]
 
 local_server = True
@@ -77,7 +77,7 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', params=params)
 
 
 @app.route('/dashboard', methods=['GET', 'POST'])
