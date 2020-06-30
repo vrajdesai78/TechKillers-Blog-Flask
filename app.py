@@ -7,7 +7,7 @@ from flask_mail import Mail
 from datetime import datetime
 import math
 
-with open('C:\\Users\\Vraj Desai\\Desktop\\Projects\\config.json', 'r') as c:
+with open('C:\\Users\\Vraj Desai\\Desktop\\Projects\\TechKillers\\config.json', 'r') as c:
     params = json.load(c)["params"]
 
 local_server = True
